@@ -9,11 +9,11 @@ def index():
     if form.validate_on_submit():
         try:
             tmpresult = getCourse.get_result(form.charcode.data, form.day.data, form.month.data, form.year.data)
-            result = '1 RUB ~ {} {}'.format(str(tmpresult[0]), str(tmpresult[1]))
+            result = '{1} {2} ~ {0} RUB'.format(*tmpresult)
         except:
             result = 'No data found'
     else:
-        result = 'not submitted'
+        result = 'Not submitted'
     return flask.render_template('index.html', form=form, result=result)
 
 if __name__ == '__main__':

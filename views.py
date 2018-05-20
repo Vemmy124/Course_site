@@ -1,4 +1,4 @@
-from flask_wtf import Form
+from flask_wtf import FlaskForm
 from wtforms import TextField, FileField, SelectField
 import pickle
 from datetime import date
@@ -11,7 +11,7 @@ def get_sorted_countries_dict():
         sortedc.append((countries[key], key))
     return sortedc
 
-class CourseForm(Form):
+class CourseForm(FlaskForm):
     day = SelectField(u'Day',
                       choices=[(str(x), x) for x in range(1, 32)],
                       default=date.today().day)

@@ -1,5 +1,6 @@
 import requests
 import xml.etree.ElementTree as ET
+import time
 
 def get_result(code, day, month, year):
     if int(day) < 10:
@@ -15,7 +16,5 @@ def get_result(code, day, month, year):
         raise ValueError
     charcode = valute.find("./CharCode")
     course = valute.find("./Value")
-    return course.text.replace(',', '.'), charcode.text
-
-if __name__ == '__main__':
-    print(*get_result("USD", 20, 5, 2018))
+    nominal = valute.find("./Nominal")
+    return course.text.replace(',', '.'), nominal.text, charcode.text
