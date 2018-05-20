@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>Rubles Course</title>
+</head>
+<body>
+<h1>Rubles change course</h1>
+<form method="post" enctype=multipart/form-data>
+        {{ form.hidden_tag() }}
+        {% for element in form %}
+            {% if element.widget.input_type != 'hidden' %}
+                {{ element.label }} {{ element() }} <br>
+            {% endif %}
+        {% endfor %}
+        <input type="submit">
+    </form>
+<br>
+{{ result }}
+</body>
+</html>
