@@ -1,0 +1,72 @@
+body {
+	background-color: #f0f0f0;
+}
+
+h1 {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 20px;
+	margin-right: 20px;
+	border-left: 20px outset black;
+	border-right: 20px outset black;
+	font-family: Georgia, Times, serif;
+	text-align: center;
+	font-size: 60pt;
+	background-color: #00eeff;
+}
+
+h2 {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 20px;
+	margin-right: 20px;
+	border-left: 20px outset black;
+	border-right: 20px outset black;
+	font-family: Georgia, Times, serif;
+	text-align: center;
+	font-size: 50pt;
+}
+
+h3 {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 20px;
+	margin-right: 20px;
+	height: 20px;
+	background-color: black;
+}
+
+form {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 20px;
+	margin-right: 20px;
+	border-left: 20px outset black;
+	border-right: 20px outset black;
+	padding: 30px;
+	text-align: left;
+	font-size: 36pt;
+	background-color: #ffff00;
+}
+
+p {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	border-left: 20px outset black;
+	border-right: 20px outset black;
+	text-align: center;
+	padding: 30px;
+	font-size: 50pt;
+	background-color: #00eeff;
+}
+
+select {
+	font-size: 36pt;
+}
+
+input {
+	font-size: 36pt;
+}
