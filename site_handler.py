@@ -1,16 +1,22 @@
+""" main file of handling the site """
 import flask
-import getCourse
+import get_course
 import views
 from __init__ import app
 
+
 @app.route('/', methods=['GET', 'POST'])
 def index():
+    """ represents the form for getting courses """
     form = views.CourseForm()
     if form.validate_on_submit():
         try:
-            tmpresult = getCourse.get_result(form.charcode.data, form.day.data, form.month.data, form.year.data)
+            tmpresult = get_course.get_result(form.charcode.data,
+                                              form.day.data,
+                                              form.month.data,
+                                              form.year.data)
             result = '{1} {2} ~ {0} RUB'.format(*tmpresult)
-        except:
+        except ValueError:
             result = 'No data found'
     else:
         result = 'Not submitted'
