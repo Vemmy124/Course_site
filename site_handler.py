@@ -22,5 +22,12 @@ def index():
         result = 'Not submitted'
     return flask.render_template('index.html', form=form, result=result)
 
+
+@app.route('/mycss.css', methods=['GET'])
+def get_css():
+    """ css getter """
+    return flask.render_template('mycss.css')
+
+
 if __name__ == '__main__':
     app.run()
